@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo Utilizar Git?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .small-image {
+            width: 650px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px; /* Margen superior para separar de los textos */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Cómo Utilizar Git para el Control de Versiones?</h1>
+    
+    <p>Git es una herramienta muy útil para cualquier persona que esté aprendiendo a programar, ya que nos ayuda a organizar y guardar nuestro trabajo de forma ordenada. En esta guía, te explicaré cómo usar Git desde cero, empezando por la creación de un repositorio local hasta la conexión con un repositorio remoto en GitHub.</p>
+
+    <p>Para crear un repositorio local en tu máquina, sigue estos pasos:</p>
+    <ol>
+        <li>
+            <strong>Abre tu terminal o Git Bash.</strong> Puedes usar el atajo de teclado <code>Win + R</code>, escribir <code>cmd</code> y presionar <code>Enter</code>.
+            <p>
+                <img src="Imag/Inicio_01.jpg" alt="Abrir terminal" class="small-image">
+            </p>
+        </li>
+        <li>
+            <strong>Verificar la versión de Git</strong>
+            <pre><code>$ git --version</code></pre>
+            <p>Este comando verifica la versión de Git instalada en tu sistema.</p>
+            <p>
+                <img src="Imag/Paso_1.jpg" alt="Navegación al directorio" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Configurar el nombre de usuario y el correo electrónico</strong>
+            <pre><code>$ git config --global user.name "Diane"</code></pre>
+            <pre><code>$ git config --global user.email "dianae2026@gmail.com"</code></pre>
+            <p>Configura tu nombre y correo electrónico para los commits.</p>
+            <p>
+                <img src="Imag/Paso_2.jpg" alt="Configuración de usuario" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Navegar al directorio del proyecto</strong>
+            <pre><code>$ cd /c/Users/Diana/OneDrive/Documentos/Página\ web</code></pre>
+            <p>Cambia al directorio donde tienes tu proyecto.</p>
+            <p>
+                <img src="Imag/Paso_3.png" alt="Navegación al directorio" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Inicializar el repositorio Git</strong>
+            <pre><code>$ git init</code></pre>
+            <p>Inicializa un nuevo repositorio Git en el directorio actual.</p>
+            <p>
+                <img src="Imag/Paso_4.jpg" alt="Inicialización del repositorio" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Listar archivos en el directorio</strong>
+            <pre><code>$ ls</code></pre>
+            <p>Muestra los archivos en el directorio actual.</p>
+            <p>
+                <img src="Imag/Paso_6.jpg" alt="Listado de archivos" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Crear un nuevo archivo HTML</strong>
+            <pre><code>$ touch blog.html</code></pre>
+            <p>Crea un nuevo archivo llamado blog.html.</p>
+            <p>
+                <img src="Imag/Paso_7.jpg" alt="Creación de blog.html" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Agregar el archivo al área de preparación</strong>
+            <pre><code>$ git add blog.html</code></pre>
+            <p>Agrega blog.html al área de preparación.</p>
+            <p>
+                <img src="Imag/Paso_8.jpg" alt="Agregar archivo al área de preparación" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Confirmar los cambios</strong>
+            <pre><code>$ git commit -m "Agregar blog.html"</code></pre>
+            <p>Realiza un commit de los cambios agregados.</p>
+            <p>
+                <img src="Imag/Paso_9.jpg" alt="Confirmar cambios" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Crear y cambiar a una nueva rama</strong>
+            <pre><code>$ git checkout -b nueva-funcionalidad</code></pre>
+            <p>Crea y cambia a una nueva rama llamada nueva-funcionalidad.</p>
+            <p>
+                <img src="Imag/Paso_10.jpg" alt="Crear nueva rama" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Agregar todos los cambios al área de preparación</strong>
+            <pre><code>$ git add .</code></pre>
+            <p>Agrega todos los archivos al área de preparación.</p>
+            <p>
+                <img src="Imag/Paso_11.jpg" alt="Agregar todos los cambios" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Confirmar los cambios en la nueva rama</strong>
+            <pre><code>$ git commit -m "Nuevos cambios"</code></pre>
+            <p>Realiza un commit de todos los cambios en la nueva rama.</p>
+            <p>
+                <img src="Imag/Paso_12.jpg" alt="Confirmar cambios en nueva rama" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Cambiar de vuelta a la rama original</strong>
+            <pre><code>$ git checkout main</code></pre>
+            <p>Cambia a la rama principal.</p>
+            <p>
+                <img src="Imag/Paso_13.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Fusionar la nueva funcionalidad en la rama actual</strong>
+            <pre><code>$ git merge nueva-funcionalidad</code></pre>
+            <p>Fusiona los cambios de nueva-funcionalidad en la rama principal.</p>
+            <p>
+                <img src="Imag/Paso_14.jpg" alt="Fusionar nueva funcionalidad" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Agregar un repositorio remoto</strong>
+            <pre><code>$ git remote add origin https://github.com/Dianesthr1703/Blog_G24.git</code></pre>
+            <p>Agrega un repositorio remoto apuntando a tu repositorio en GitHub.</p>
+            <p>
+                <img src="imag/Paso_15.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Enviar los cambios a GitHub</strong>
+            <pre><code>$ git push -u origin nueva-funcionalidad</code></pre>
+            <p>Envía los cambios de la rama nueva-funcionalidad al repositorio remoto en GitHub.</p>
+            <p>
+                <img src="imag/Paso_16.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+        </li>
+        <li>
+            <strong>Conexión Exitosa a GitHub</strong>
+            <p>
+                <img src="imag/Paso_17.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            </p>
+            <p>Eso significa que ya ha logrado conectar tu dispositivo a GitHub.</p>
+        </li>
+        
+    <h2>Nota</h2>
+    <p>Este proceso nos enseña a configurar Git, crear un proyecto en nuestra computadora y guardar...</p>
+</body>
+</html>
