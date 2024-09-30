@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #b6bfff;
-            color: #7b0557;
+            background-color: #b6bfff; /* Color de fondo suave */
+            color: #3e1f78; /* Color de texto principal que contrasta con el fondo */
             line-height: 1.6;
             margin: 20px;
             padding: 0;
@@ -22,15 +22,16 @@
             margin: 20px 0; /* Margen superior e inferior */
         }
         h1 {
-            color: #FF69B4;
+            color: #FF69B4; /* Color rosa brillante para el título */
             font-weight: bold;
         }
         h2 {
-            color: #2980b9;
+            color: #2980b9; /* Color azul para los subtítulos */
             margin-top: 20px;
         }
         p {
             margin: 10px 0;
+            color: #4b0ca9; /* Color púrpura más oscuro para el texto de párrafos */
         }
         ol {
             margin: 10px 0 20px 20px;
@@ -47,12 +48,23 @@
             border-radius: 10px;
             margin-top: 20px; /* Margen superior para separar de los textos */
         }
+        h4 {
+            color: #FF4500; /* Color naranja para el encabezado de la nota */
+            font-weight: bold;
+        }
+        .nota-recuadro {
+            background-color: #FFEBEE; /* Fondo claro para la nota */
+            border: 2px solid #FF4500; /* Borde naranja para la nota */
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     
     <div class="titulo-recuadro">
-     <h1 class="text-center" style="color: #FF69B4; font-weight: bold;">¿Cómo Empezar a Usar Git para Gestionar tus Versiones?</h1>
+        <h1 class="text-center">¿Cómo Empezar a Usar Git para Gestionar tus Versiones?</h1>
     </div>
     
     <p>Git es una herramienta muy útil para cualquier persona que esté aprendiendo a programar, ya que nos ayuda a organizar y guardar nuestro trabajo de forma ordenada. En esta guía, te explicaré cómo usar Git desde cero, empezando por la creación de un repositorio local hasta la conexión con un repositorio remoto en GitHub.</p>
@@ -155,47 +167,36 @@
             </p>
         </li>
         <li>
-            <strong>Cambiar de vuelta a la rama original</strong>
+            <strong>Fusionar la rama principal con la nueva rama</strong>
             <pre><code>$ git checkout main</code></pre>
-            <p>Cambia a la rama principal.</p>
-            <p>
-                <img src="Imag/Paso_13.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
-            </p>
-        </li>
-        <li>
-            <strong>Fusionar la nueva funcionalidad en la rama actual</strong>
             <pre><code>$ git merge nueva-funcionalidad</code></pre>
             <p>Fusiona los cambios de nueva-funcionalidad en la rama principal.</p>
             <p>
-                <img src="Imag/Paso_14.jpg" alt="Fusionar nueva funcionalidad" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+                <img src="Imag/Paso_13.jpg" alt="Fusionar ramas" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
             </p>
         </li>
         <li>
-            <strong>Agregar un repositorio remoto</strong>
-            <pre><code>$ git remote add origin https://github.com/Dianesthr1703/Blog_G24.git</code></pre>
-            <p>Agrega un repositorio remoto apuntando a tu repositorio en GitHub.</p>
+            <strong>Configurar el repositorio remoto en GitHub</strong>
+            <pre><code>$ git remote add origin git@github.com:tu_usuario/tu_repositorio.git</code></pre>
+            <p>Conecta tu repositorio local con el repositorio remoto.</p>
             <p>
-                <img src="Imag/Paso_15.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+                <img src="Imag/Paso_14.jpg" alt="Configuración del repositorio remoto" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
             </p>
         </li>
         <li>
-            <strong>Enviar los cambios a GitHub</strong>
-            <pre><code>$ git push -u origin nueva-funcionalidad</code></pre>
-            <p>Envía los cambios de la rama nueva-funcionalidad al repositorio remoto en GitHub.</p>
+            <strong>Subir los cambios al repositorio remoto</strong>
+            <pre><code>$ git push -u origin main</code></pre>
+            <p>Sube los cambios realizados en tu repositorio local a GitHub.</p>
             <p>
-                <img src="Imag/Paso_16.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+                <img src="Imag/Paso_15.jpg" alt="Subida de cambios" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
             </p>
         </li>
-        <li>
-            <strong>Conexión Exitosa a GitHub</strong>
-            <p>
-                <img src="Imag/Paso_17.jpg" alt="Enviar cambios a GitHub" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
-            </p>
-            <p>Eso significa que ya ha logrado conectar tu dispositivo a GitHub.</p>
-        </li>
-    <h4 class="text" style="color: #4b0ca9; font-weight: bold;">Nota</h4>
-    <p>Este proceso nos enseña a configurar Git, crear un proyecto en nuestra computadora y guardar.</p>
+    </ol>
+
+    <div class="nota-recuadro">
+        <h4>Nota:</h4>
+        <p>Asegúrate de tener configuradas las claves SSH para evitar problemas de autenticación al interactuar con GitHub.</p>
+    </div>
+
 </body>
-</html> 
-
-
+</html>
